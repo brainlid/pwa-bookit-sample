@@ -10,10 +10,10 @@ use Mix.Config
 # Configures the endpoint
 config :pwa, PwaWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "DTRcDsNtq8AA2tYBNqhRiDDuK3geJd+yKO526euHSTJhqMjOE/wWeSZbfzRwG8gK",
+  secret_key_base: "JzsuEPR8UT4MRwob8v19wnmV5c9Y60xui9ispyG/wwJHBSBUWPq681nmjIdBgcvc",
   render_errors: [view: PwaWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Pwa.PubSub,
-  live_view: [signing_salt: "00ry9Jws"]
+  live_view: [signing_salt: "VSoipTev"]
 
 # Configures Elixir's Logger
 config :logger, :console,

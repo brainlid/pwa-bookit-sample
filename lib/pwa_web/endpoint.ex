@@ -7,7 +7,7 @@ defmodule PwaWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_pwa_key",
-    signing_salt: "i6bRpSG3"
+    signing_salt: "wRYjojWk"
   ]
 
   socket "/socket", PwaWeb.UserSocket,
