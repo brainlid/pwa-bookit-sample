@@ -26,3 +26,8 @@ Created the project using:
 mix phx.new pwa --live --no-ecto
 ```
 
+Generated LiveView resource pages
+
+```
+mix phx.gen.live Books Book books title:string author:string
+```

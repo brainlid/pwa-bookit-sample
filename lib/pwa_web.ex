@@ -46,6 +46,7 @@ defmodule PwaWeb do
     quote do
       use Phoenix.LiveView,
         layout: {PwaWeb.LayoutView, "live.html"}
+      import PwaWeb.Components
 
       unquote(view_helpers())
     end
@@ -54,6 +55,7 @@ defmodule PwaWeb do
   def live_component do
     quote do
       use Phoenix.LiveComponent
+      import PwaWeb.Components
 
       unquote(view_helpers())
     end
@@ -83,6 +85,7 @@ defmodule PwaWeb do
 
       # Import LiveView helpers (live_render, live_component, live_patch, etc)
       import Phoenix.LiveView.Helpers
+      import PwaWeb.LiveHelpers
 
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View

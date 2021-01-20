@@ -1,0 +1,56 @@
+<%= if @live_action in [:new, :edit] do %>
+  <%= modal @socket, PwaWeb.BookLive.FormComponent,
+    id: @book.id || :new,
+    title: @page_title,
+    action: @live_action,
+    book: @book,
+    return_to: Routes.book_index_path(@socket, :index) %>
+<% end %>
+
+<div class="max-w-3xl mx-auto px-4 sm:px-6 mb-5 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
+  <div class="flex items-center space-x-5">
+    <h1 class="text-2xl font-bold text-gray-900">Books</h1>
+  </div>
+  <div class="mt-6 flex flex-col-reverse justify-stretch space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-x-reverse sm:space-y-0 sm:space-x-3 md:mt-0 md:flex-row md:space-x-3">
+    <%= live_patch "New Book", to: Routes.book_index_path(@socket, :new),
+      class: "inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+  </div>
+</div>
+
+<div class="bg-white shadow overflow-hidden sm:rounded-md">
+  <ul class="divide-y divide-gray-200">
+    <%= for book <- @books do %>
+      <li id="book-<%= book.id %>">
+        <div class="block hover:bg-gray-50">
+          <div class="px-4 py-4 flex items-center sm:px-6">
+            <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
+              <div>
+                <div class="flex text-sm font-medium text-indigo-600 truncate">
+                  <p><%= live_redirect book.title, to: Routes.book_show_path(@socket, :show, book) %></p>
+                  <p class="ml-1 font-normal text-gray-500">
+                    <%= book.author %>
+                  </p>
+                </div>
+              </div>
+              <div class="mt-4 flex-shrink-0 sm:mt-0 text-sm font-medium">
+                <%= live_patch "Edit", to: Routes.book_index_path(@socket, :edit, book), class: "text-indigo-600 hover:text-indigo-900" %>
+
+                <span class="ml-1">
+                  <%= link "Delete", to: "#", phx_click: "delete", phx_value_id: book.id, data: [confirm: "Are you sure?"], class: "text-red-600 hover:text-red-900" %>
+                </span>
+              </div>
+            </div>
+            <div class="ml-5 flex-shrink-0">
+              <!-- Heroicon name: chevron-right -->
+              <%= live_redirect to: Routes.book_show_path(@socket, :show, book) do %>
+              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
