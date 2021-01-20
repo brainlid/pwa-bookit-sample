@@ -17,3 +17,12 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Project Notes
+
+Created the project using:
+
+```
+mix phx.new pwa --live --no-ecto
+```
+
