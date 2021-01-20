@@ -40,3 +40,4 @@ Used [Wojtek Mach's Phoenix Example](https://github.com/wojtekmach/phoenix_examp
 
 Deployed the master branch and the pwa branch to Heroku as separate apps for easier side-by-side comparisons.
 
+Had to add the buildpacks manually in the Heroku interface.
