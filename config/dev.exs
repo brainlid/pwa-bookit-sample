@@ -1,4 +1,4 @@
-use Mix.Config
+import Mix.Config
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -7,6 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :pwa, PwaWeb.Endpoint,
+  url: [host: "localhost"],
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

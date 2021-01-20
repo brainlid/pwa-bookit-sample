@@ -1,0 +1,23 @@
+{
+  "stack": "heroku-18",
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    },
+    {
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git"
+    }
+  ],
+  "env": {
+    "APP_NAME": {
+      "description": "Book It! - Sample Phoenix LiveView web application.",
+      "required": true,
+      "value": "bookit-plain"
+    },
+    "SECRET_KEY_BASE": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    }
+  },
+  "addons": []
+}

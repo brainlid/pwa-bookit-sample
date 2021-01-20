@@ -31,3 +31,12 @@ Generated LiveView resource pages
 ```
 mix phx.gen.live Books Book books title:string author:string
 ```
+
+
+
+## Hosting
+
+Used [Wojtek Mach's Phoenix Example](https://github.com/wojtekmach/phoenix_example) for one-click deployments. Configured for Heroku.
+
+Deployed the master branch and the pwa branch to Heroku as separate apps for easier side-by-side comparisons.
+
