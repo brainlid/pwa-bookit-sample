@@ -8,11 +8,6 @@
   <%= csrf_meta_tag() %>
   <%= live_title_tag assigns[:page_title] || "Web", suffix: " · Phoenix Framework" %>
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-  <!-- Font Awesome Light + Regular + Solid -->
-  <link href="<%= Routes.static_path(@conn, "/css/fontawesome.min.css") %>" rel="stylesheet" />
-  <link href="<%= Routes.static_path(@conn, "/css/light.min.css") %>" rel="stylesheet" />
-  <link href="<%= Routes.static_path(@conn, "/css/regular.min.css") %>" rel="stylesheet" />
-  <link href="<%= Routes.static_path(@conn, "/css/solid.min.css") %>" rel="stylesheet" />
 
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
