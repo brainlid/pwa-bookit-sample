@@ -1,4 +1,6 @@
-# Pwa
+# PWA 
+
+LiveView configured as a Progressive Web Application.
 
 To start your Phoenix server:
 
@@ -9,10 +11,6 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Resources
-
-  * PWA Tips: https://www.youtube.com/watch?v=KzvK809rl3Q
 
 ## Project Notes
 
@@ -27,6 +25,31 @@ Generated LiveView resource pages
 ```
 mix phx.gen.live Books Book books title:string author:string
 ```
+
+## Resources
+
+### Project
+
+- [Sample repo](https://github.com/brainlid/pwa-bookit-sample/)
+  - 2 branches
+- [Commit adding TailwindCSS and Alpine.js](https://github.com/brainlid/pwa-bookit-sample/commit/07bc228338d66a4ac96c80975baa4a8cfd13a82d)
+- [Podcast: #021 Tailwind CSS, Alpine.js and LiveView with Patrick Thompson](https://thinkingelixir.com/podcast-episodes/021-tailwind-css-alpine-js-and-liveview-with-patrick-thompson/) - Show notes has lots of great Tailwind and Alpine resources.
+
+### PWA Resources
+
+- [8 Tips to Make Your Website Feel Like an iOS App - YouTube video](https://www.youtube.com/watch?v=KzvK809rl3Q)
+- [8 Tips to Make Your Website Feel Like an iOS App - Blog form](https://samselikoff.com/blog/8-tips-to-make-your-website-feel-like-an-ios-app)
+- [MDN env(safe-area-inset-*)](https://developer.mozilla.org/en-US/docs/Web/CSS/env())
+- [Google's Progressive Web Apps guide](https://web.dev/progressive-web-apps/)
+
+### Understanding the State of the Art
+
+Deals with platform differences and things like Push Notifications.
+
+- [The state of PWA support on mobile and desktop in 2020](https://simplabs.com/blog/2020/06/10/the-state-of-pwa-support-on-mobile-and-desktop-in-2020/)
+- [Progressive Web Apps: Core Features, Architecture, Pros and Cons](https://www.altexsoft.com/blog/engineering/progressive-web-apps/)
+- [What are Progressive Web Application Push Notifications?](https://love2dev.com/pwa/push-notifications/)
+
 
 ## Generate Icon and Splash
 
@@ -63,16 +86,3 @@ Update in the following ways:
 ```html
 <link rel="icon" type="image/png" sizes="196x196" href="<%= Routes.static_path(@conn, "/images/favicon-196.png") %>" />
 ```
-
-## Fix Header
-
-Can't control the iOS time display. It will show as white. So we need our header to be darker so the white shows up well.
-
-Challenge: Apple's "notch"
-
-Add custom "standalone" media query so we can adjust based on being in a full browser versus our standalone mode.
-
-Update `tailwind.config.js`. When adding standalone, must also add the defaults. Otherwise they are overridden and lost. [Defaults](https://tailwindcss.com/docs/theme)
-
-Now our scrolling experience is improved.
-
