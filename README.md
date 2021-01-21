@@ -37,8 +37,8 @@ mix phx.gen.live Books Book books title:string author:string
 
 ### PWA Resources
 
-- [Video](https://www.youtube.com/watch?v=KzvK809rl3Q)
-- [Blog post](https://samselikoff.com/blog/8-tips-to-make-your-website-feel-like-an-ios-app)
+- [8 Tips to Make Your Website Feel Like an iOS App - YouTube video](https://www.youtube.com/watch?v=KzvK809rl3Q)
+- [8 Tips to Make Your Website Feel Like an iOS App - Blog form](https://samselikoff.com/blog/8-tips-to-make-your-website-feel-like-an-ios-app)
 - [MDN env(safe-area-inset-*)](https://developer.mozilla.org/en-US/docs/Web/CSS/env())
 - [Google's Progressive Web Apps guide](https://web.dev/progressive-web-apps/)
 
