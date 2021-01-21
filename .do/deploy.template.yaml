@@ -4,7 +4,7 @@ spec:
   - name: "web"
     dockerfile_path: "Dockerfile"
     git:
-      branch: "basic-version"
+      branch: "bookit-basic"
       repo_clone_url: "https://github.com/brainlid/pwa-bookit-sample/tree/bookit-basic"
     envs:
     - key: "SECRET_KEY_BASE"
