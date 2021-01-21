@@ -8,8 +8,8 @@ spec:
       repo_clone_url: "https://github.com/brainlid/pwa-bookit-sample.git"
     envs:
     - key: "SECRET_KEY_BASE"
-    - key: "POOL_SIZE"
-      value: "10"
+    # - key: "POOL_SIZE"
+    #   value: "10"
     - key: "APP_DOMAIN"
       value: "${APP_DOMAIN}"
   #   - key: "DATABASE_URL"
