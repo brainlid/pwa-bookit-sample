@@ -5,7 +5,7 @@ spec:
     dockerfile_path: "Dockerfile"
     git:
       branch: "basic-version"
-      repo_clone_url: "https://github.com/wojtekmach/phoenix_example.git"
+      repo_clone_url: "https://github.com/brainlid/pwa-bookit-sample/tree/bookit-basic"
     envs:
     - key: "SECRET_KEY_BASE"
     - key: "POOL_SIZE"
