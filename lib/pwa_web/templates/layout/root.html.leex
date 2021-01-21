@@ -53,7 +53,7 @@
   style="-webkit-tap-highlight-color: transparent;">
 
   <div class="min-h-screen bg-gray-200">
-    <nav x-data="{ open: false }" class="fixed w-full bg-gray-800 standalone:pt-5">
+    <nav x-data="{ open: false }" class="fixed w-full bg-gray-800 standalone:pt-safe-top">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
@@ -156,14 +156,11 @@
     </nav>
 
     <div class="py-10">
-      <main>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-10 standalone:mt-14">
-          <%= @inner_content %>
-        </div>
-      </main>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-10 pt-safe-top">
+        <%= @inner_content %>
+      </div>
     </div>
   </div>
-
 
 </body>
 </html>
