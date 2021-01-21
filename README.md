@@ -38,6 +38,8 @@ mix phx.gen.live Books Book books title:string author:string
 
 Used [Wojtek Mach's Phoenix Example](https://github.com/wojtekmach/phoenix_example) for one-click deployments. Configured for Heroku.
 
-Deployed the master branch and the pwa branch to Heroku as separate apps for easier side-by-side comparisons.
+Deploying to DigitalOcean.
 
-Added the buildpacks manually in the Heroku interface.
+[![Deploy to DigitalOcean](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/brainlid/pwa-bookit-sample/tree/bookit-basic)
+
+Use `mix phx.gen.secret` to generate a secret appropriate for the `SECRET_KEY_BASE` environment variable.
