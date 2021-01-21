@@ -36,9 +36,7 @@ mix phx.gen.live Books Book books title:string author:string
 
 ## Hosting
 
-Used [Wojtek Mach's Phoenix Example](https://github.com/wojtekmach/phoenix_example) for one-click deployments. Configured for Heroku.
-
-Deploying to DigitalOcean.
+Used [Wojtek Mach's Phoenix Example](https://github.com/wojtekmach/phoenix_example) for one-click deployments. Configured for DigitalOcean.
 
 [![Deploy to DigitalOcean](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/brainlid/pwa-bookit-sample/tree/bookit-basic)
 
